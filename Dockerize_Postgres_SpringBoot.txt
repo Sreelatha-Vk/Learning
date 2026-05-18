@@ -1,0 +1,22 @@
+go to hub.docker.com
+Scroll down to see postgres, It tells command and available versions . Default version is latest
+
+docker pull postgres:version or docker pull postgres
+
+Now run this postgres database in a container 
+----in detached mode with port mapping (Right side port mapping done to the postgres container while Left hand side the port exposed to ooutside world so that our spring boot can access it) 
+----with environment variables 
+----and container name , 
+----and volume (This is needed to avoid data lose when the is stopped. Right side is persistence path provided by docker and left hand is our custom path where we want to take backup. Search for volume in docker hub to get right hand side value)
+
+docker run -d -p 5432:5432 -e POSTGRES_USER=user1 -e POSTGRES_PASSWORD=abcd1234 -e POSTGRES_DB=springbootproject --name=postgres_con -v C:/postgres/data:/var/lib/postgresql/data postgres
+
+Change localhost to container IP in app.properties
+
+to get container IP, use docker inspect postgrescontainername/id
+
+create image for app and run it,
+
+But container IP will change everytime you restart. So its not a good idea. So we use docker compose
+
+
