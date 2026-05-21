@@ -1,0 +1,37 @@
+Project Setup in VSCode 
+
+1. Add extensions 
+  - Java Extension Pack (Microsoft)
+  - Spring Boot Extension (VMware)
+
+2. Restart VSCode
+
+3. Create Spring Boot Project 
+   -- (Ctrl + Shift + P) to get search box
+   -- search Type:
+		Spring Initializr
+ 
+		- Select "Spring Initializr: Create a Maven Project"
+		- Choose Maven
+		- Java
+		- Spring boot version
+		- Enter Project details
+			- Group ID
+			- Artifact ID
+			- Add Dependencies
+				•	Spring Web 
+				•	Spring Data JPA 
+				•	PostgreSQL Driver 
+				•	Lombok 
+				•	Validation 
+				
+				
+	-- Enter
+	-- Choose folder where project is to be saved
+	
+4. Open the project
+5. Add Database Configuration in application.properties
+6. Select Main class and click Run button 	
+	
+	
+
